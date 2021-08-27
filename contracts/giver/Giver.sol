@@ -1,4 +1,4 @@
-pragma ton-solidity >= 0.48.0;
+pragma ton-solidity >= 0.47.0;
 pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
@@ -18,7 +18,7 @@ contract Giver is ExternalOwner, RandomNonce, CheckPubKey {
         setOwnership(_owner);
     }
 
-    function sendGrams(address dest, uint64 amount) public view onlyOwner {
+    function sendGrams(address dest, uint64 amount) public pure onlyOwner {
         tvm.accept();
 
         dest.transfer(amount, false, 1);

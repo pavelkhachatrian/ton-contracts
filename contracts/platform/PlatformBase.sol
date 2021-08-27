@@ -1,4 +1,4 @@
-pragma ton-solidity >= 0.48.0;
+pragma ton-solidity >= 0.47.0;
 
 abstract contract PlatformBase {
     address public /*static*/ root;
